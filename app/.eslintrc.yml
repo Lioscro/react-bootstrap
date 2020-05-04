@@ -1,0 +1,22 @@
+env:
+  browser: true
+  es6: true
+  node: true
+plugins:
+  - react
+settings:
+  react:
+    version: 16.10.2
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 2018
+  sourceType: module
+globals:
+  it: true
+rules:
+  react/display-name: off
+  react/prop-types: off

@@ -1,0 +1,17 @@
+version: "2"
+services:
+  app:
+    extends:
+      file: ../docker-compose-common.yml
+      service: app
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+      - "3030:443"
+
+volumes:
+  data:
+  media:
+
+networks:
+  network:

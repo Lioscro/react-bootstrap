@@ -1,0 +1,14 @@
+version: "2"
+services:
+  app:
+    extends:
+      file: ../docker-compose-common.yml
+      service: app
+    command: make test
+    ports:
+      - "80:80"
+    environment:
+      CI:
+
+networks:
+  network:

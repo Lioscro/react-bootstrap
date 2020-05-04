@@ -1,0 +1,9 @@
+version: "2"
+services:
+  app:
+    build: ../app
+    image: ${IMAGE}
+    environment:
+      BACKEND_URL:
+      CCA_ENVIRONMENT:
+      PASSENGER_APP_ENV: ${APP_ENVIRONMENT}
