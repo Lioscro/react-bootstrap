@@ -1,19 +1,19 @@
 version: "2"
 services:
-  cca:
+  app:
     extends:
       file: ../docker-compose-common.yml
-      service: cca
+      service: app
     command: make start
     ports:
       - "3000:3000"
     volumes:
-      - ../../cca/src:/home/app/cca/src
-      - ../../cca/public:/home/app/cca/public
-      - ../../cca/package.json:/home/app/cca/package.json
-      - ../../cca/yarn.lock:/home/app/cca/yarn.lock
-      - ../../cca/.env:/home/app/cca/.env
-      - ../../cca/Makefile:/home/app/cca/Makefile
-      - ../../cca/.prettierrc:/home/app/cca/.prettierrc
-      - ../../cca/.eslintrc.yml:/home/app/cca/.eslintrc.yml
-      - ../../cca/webapp.conf:/etc/nginx/sites-enabled/webapp.conf
+      - ../../app/src:/home/app/app/src
+      - ../../app/public:/home/app/app/public
+      - ../../app/package.json:/home/app/app/package.json
+      - ../../app/yarn.lock:/home/app/app/yarn.lock
+      - ../../app/.env:/home/app/app/.env
+      - ../../app/Makefile:/home/app/app/Makefile
+      - ../../app/.prettierrc:/home/app/app/.prettierrc
+      - ../../app/.eslintrc.yml:/home/app/app/.eslintrc.yml
+      - ../../app/webapp.conf:/etc/nginx/sites-enabled/webapp.conf

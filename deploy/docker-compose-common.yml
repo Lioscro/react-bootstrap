@@ -5,5 +5,5 @@ services:
     image: ${IMAGE}
     environment:
       BACKEND_URL:
-      CCA_ENVIRONMENT:
+      APP_ENVIRONMENT:
       PASSENGER_APP_ENV: ${APP_ENVIRONMENT}
